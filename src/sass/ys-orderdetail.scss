@@ -1,0 +1,225 @@
+@charset "utf-8";
+@import "tobe/function";
+
+.red{
+  color: #F76260;
+}
+.order-detail{
+  background: #ffffff;
+  margin-top: rem(118);
+  .detail-bg{
+    background: #F6FBFE;
+    height: rem(88);
+    line-height: rem(88);
+    font-size: rem(30);
+    .detail-title{
+      @include display(flex);
+      @include hairline(bottom, #d9d9d9);
+      @include justify-content(space-between);
+      position: relative;
+      margin: 0 rem(30);
+    }
+  }
+  .detail{
+    @include hairline(bottom, #d9d9d9);
+    margin: 0 rem(30);
+    padding: rem(6) 0 rem(26);
+    position: relative;
+    font-size: rem(24);
+    color: #232323;
+    .order-info{
+      @include display(flex);
+      margin-top: rem(20);
+      label{
+        color: #888888;
+        margin-right: rem(20);
+        width: rem(100);
+      }
+    }
+    .order-button{
+      @include justify-content(space-between);
+      .order-num{
+        margin-top: rem(20);
+        i{
+          font-style: normal;
+          font-family: arial;
+          margin-right: rem(5);
+        }
+      }
+    }
+  }
+}
+button {
+  @include full-line(#66667B, transparent, rem(4));
+  position: relative;
+  width: rem(144);
+  height: rem(60);
+  line-height: rem(60);
+  text-align: center;
+  border: none;
+  background: #ffffff;
+  font-size: rem(26);
+  color: #4B4B64;
+}
+.detail-list{
+  background: #ffffff;
+  padding-left: rem(30);
+  margin-top: rem(40);
+  font-size: rem(24);
+  color: #888888;
+  .list-goods{
+    @include display(flex);
+    @include hairline(bottom, #d9d9d9);
+    position: relative;
+    padding: rem(30) rem(30) rem(15) 0;
+    img{
+      width: rem(160);
+      height: rem(160);
+      margin-right: rem(20);
+    }
+    .list-title{
+      @include clamp(2);
+      font-size: rem(30);
+      color: #585858;
+      line-height: rem(40);
+    }
+    .list-id{
+      @include display(flex);
+      @include justify-content(space-between);
+      margin-top: rem(10);
+      .list-price{
+        margin-top: rem(4);
+      }
+      .red{
+        margin-right: rem(18);
+        i{
+          font-style: normal;
+          font-family: arial;
+          margin-right: rem(5);
+        }
+      }
+      button{
+        margin-top: rem(8);
+      }
+    }
+  }
+}
+.order-pop{
+  display:none;
+  &.showpop{
+    display: block;
+  }
+}
+.order-bg {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10000;
+}
+.modal {
+  width: rem(550);
+  position: fixed;
+  z-index: 11000;
+  left: 50%;
+  margin-left: rem(-275);
+  margin-top: 0;
+  overflow: hidden;
+  top: 50%;
+  text-align: center;
+  border-radius: rem(6);
+  transform: translate3d(0, -50%, 0)!important;
+  transition-property: opacity;
+  color: #000000;
+}
+.modal-inner {
+  @include hairline(bottom, #d9d9d9);
+  position: relative;
+  padding: rem(40) rem(60);
+  border-radius: rem(6) rem(6) 0 0;
+  position: relative;
+  background: #ffffff;
+}
+.modal-text {
+  font-size: rem(34);
+  color: #232323;
+  line-height: rem(36);
+  margin-bottom: rem(20);
+}
+.modal-info{
+  font-size: rem(30);
+  color: #999999;
+  line-height: rem(40);
+  text-align: left;
+  margin-bottom: rem(20);
+}
+.modal-input {
+  @include full-line(#aaaaaa,transparent,0);
+  padding: 0 rem(20);
+  position: relative;
+  height: rem(88);
+  input {
+    border: none;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    background: none;
+    position: relative;
+    z-index: 10;
+  }
+  .btn-ico{
+    background: url("../assets/butler/search-close.png") no-repeat center center;
+    width: rem(28);
+    height: rem(28);
+    background-size: 100% 100%;
+    position: absolute;
+    right: rem(30);
+    top: rem(30);
+    z-index: 2222;
+  }
+}
+.modal-buttons {
+  height: rem(104);
+  line-height: rem(104);
+  overflow: hidden;
+  @include display(flex);
+  @include justify-content(center);
+}
+
+.modal-button {
+  @include hairline(right, #d9d9d9);
+  @include flex(1);
+  width: 100%;
+  padding: 0 rem(10);
+  height: rem(104);
+  font-size: rem(36);
+  border: 0;
+  text-align: center;
+  color: #585858;
+  background: #ffffff;
+  display: block;
+  position: relative;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: pointer;
+  box-sizing: border-box;
+  &:first-child {
+    border-radius: 0 0 0 rem(6);
+  }
+  &:last-child {
+    background-image: none;
+    border-radius: 0 0 rem(6) 0;
+    color: #B2B2B2;
+  }
+  &:first-child:last-child {
+    border-radius: 0 0 rem(6) rem(6);
+    background-origin: padding-box;
+  }
+  &.sure{
+    color: #000000;
+    font-weight: bold;
+  }
+}
