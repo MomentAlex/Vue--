@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import $ from 'jquery'
 import { DatetimePlugin } from 'vux'
 
 Vue.use(DatetimePlugin)

@@ -1,18 +1,18 @@
 @charset "utf-8";
 @import "tobe/function";
-
-.red{
+.red {
   color: #F76260;
 }
-.order-detail{
+
+.order-detail {
   background: #ffffff;
   margin-top: rem(118);
-  .detail-bg{
+  .detail-bg {
     background: #F6FBFE;
     height: rem(88);
     line-height: rem(88);
     font-size: rem(30);
-    .detail-title{
+    .detail-title {
       @include display(flex);
       @include hairline(bottom, #d9d9d9);
       @include justify-content(space-between);
@@ -20,27 +20,27 @@
       margin: 0 rem(30);
     }
   }
-  .detail{
+  .detail {
     @include hairline(bottom, #d9d9d9);
     margin: 0 rem(30);
     padding: rem(6) 0 rem(26);
     position: relative;
     font-size: rem(24);
     color: #232323;
-    .order-info{
+    .order-info {
       @include display(flex);
       margin-top: rem(20);
-      label{
+      label {
         color: #888888;
         margin-right: rem(20);
         width: rem(100);
       }
     }
-    .order-button{
+    .order-button {
       @include justify-content(space-between);
-      .order-num{
+      .order-num {
         margin-top: rem(20);
-        i{
+        i {
           font-style: normal;
           font-family: arial;
           margin-right: rem(5);
@@ -49,6 +49,7 @@
     }
   }
 }
+
 button {
   @include full-line(#66667B, transparent, rem(4));
   position: relative;
@@ -61,55 +62,58 @@ button {
   font-size: rem(26);
   color: #4B4B64;
 }
-.detail-list{
+
+.detail-list {
   background: #ffffff;
   padding-left: rem(30);
   margin-top: rem(40);
   font-size: rem(24);
   color: #888888;
-  .list-goods{
+  .list-goods {
     @include display(flex);
     @include hairline(bottom, #d9d9d9);
     position: relative;
     padding: rem(30) rem(30) rem(15) 0;
-    img{
+    img {
       width: rem(160);
       height: rem(160);
       margin-right: rem(20);
     }
-    .list-title{
+    .list-title {
       @include clamp(2);
       font-size: rem(30);
       color: #585858;
       line-height: rem(40);
     }
-    .list-id{
+    .list-id {
       @include display(flex);
       @include justify-content(space-between);
       margin-top: rem(10);
-      .list-price{
+      .list-price {
         margin-top: rem(4);
       }
-      .red{
+      .red {
         margin-right: rem(18);
-        i{
+        i {
           font-style: normal;
           font-family: arial;
           margin-right: rem(5);
         }
       }
-      button{
+      button {
         margin-top: rem(8);
       }
     }
   }
 }
-.order-pop{
-  display:none;
-  &.showpop{
+
+.order-pop {
+  display: none;
+  &.showpop {
     display: block;
   }
 }
+
 .order-bg {
   position: fixed;
   left: 0;
@@ -119,6 +123,7 @@ button {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 10000;
 }
+
 .modal {
   width: rem(550);
   position: fixed;
@@ -134,6 +139,7 @@ button {
   transition-property: opacity;
   color: #000000;
 }
+
 .modal-inner {
   @include hairline(bottom, #d9d9d9);
   position: relative;
@@ -142,21 +148,24 @@ button {
   position: relative;
   background: #ffffff;
 }
+
 .modal-text {
   font-size: rem(34);
   color: #232323;
   line-height: rem(36);
   margin-bottom: rem(20);
 }
-.modal-info{
+
+.modal-info {
   font-size: rem(30);
   color: #999999;
   line-height: rem(40);
   text-align: left;
   margin-bottom: rem(20);
 }
+
 .modal-input {
-  @include full-line(#aaaaaa,transparent,0);
+  @include full-line(#aaaaaa, transparent, 0);
   padding: 0 rem(20);
   position: relative;
   height: rem(88);
@@ -169,7 +178,7 @@ button {
     position: relative;
     z-index: 10;
   }
-  .btn-ico{
+  .btn-ico {
     background: url("../assets/butler/search-close.png") no-repeat center center;
     width: rem(28);
     height: rem(28);
@@ -180,6 +189,7 @@ button {
     z-index: 2222;
   }
 }
+
 .modal-buttons {
   height: rem(104);
   line-height: rem(104);
@@ -189,7 +199,8 @@ button {
 }
 
 .modal-button {
-  @include hairline(right, #d9d9d9);
+  @include hairline(right,
+  #d9d9d9);
   @include flex(1);
   width: 100%;
   padding: 0 rem(10);
@@ -218,7 +229,7 @@ button {
     border-radius: 0 0 rem(6) rem(6);
     background-origin: padding-box;
   }
-  &.sure{
+  &.sure {
     color: #000000;
     font-weight: bold;
   }

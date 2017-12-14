@@ -48,14 +48,6 @@ var originalConfig = {
             }
         }]
     },
-    plugins: [
-        new webpack.optimize.CommonsChunkPlugin('common.js'),
-        new webpack.ProvidePlugin({
-            jQuery: "jquery",
-            $: "jquery"
-        }),
-
-    ]
 }
 
 const vuxLoader = require('vux-loader')

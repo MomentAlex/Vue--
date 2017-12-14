@@ -1,7 +1,6 @@
 @charset "utf-8";
 @import "tobe/function";
-
-%search{
+%search {
   background: url("../assets/butler/search.png") no-repeat center center;
   background-color: transparent;
   background-size: 100% 100%;
@@ -9,14 +8,19 @@
   height: rem(26);
   margin-right: rem(10);
 }
-.content{
+
+.content {
   padding-top: rem(88);
 }
-.faq-search{
-  margin: rem(16);
+
+.order-search {
+  padding: rem(16);
+}
+
+.faq-search {
   position: relative;
   background: #eee;
-  .faq-import{
+  .faq-import {
     border: none;
     width: 100%;
     height: rem(56);
@@ -24,11 +28,13 @@
     font-size: rem(26);
     color: #B2B2B2;
     position: relative;
-    @include full-line(#E6E6EA,transparent,rem(50));
+    @include full-line(#E6E6EA,
+    transparent,
+    rem(50));
     z-index: 22;
     background-color: transparent;
   }
-  .search-default{
+  .search-default {
     width: 100%;
     height: rem(56);
     @include display(flex);
@@ -39,19 +45,19 @@
     position: absolute;
     left: 0;
     top: 0;
-    .searchs{
+    .searchs {
       @extend %search;
     }
   }
 }
+
 .search-ts {
-  margin: rem(16);
   @include display(flex);
   @include align-items(center);
-  .search-input{
+  .search-input {
     position: relative;
     @include flex(1);
-    .search-ico{
+    .search-ico {
       background: url("../assets/butler/search-close.png") no-repeat center center;
       width: rem(28);
       height: rem(28);
@@ -62,13 +68,15 @@
       z-index: 2222;
     }
   }
-  .faq-imports{
+  .faq-imports {
     border: none;
     width: 100%;
     height: rem(56);
     background: #fff;
     position: relative;
-    @include full-line(#E6E6EA,transparent,rem(50));
+    @include full-line(#E6E6EA,
+    transparent,
+    rem(50));
     z-index: 22;
     background-color: transparent;
     text-indent: rem(52);
@@ -76,7 +84,7 @@
     color: #000000;
     cursor: pointer;
   }
-  .search-special{
+  .search-special {
     width: 100%;
     height: rem(56);
     @include display(flex);
@@ -87,99 +95,110 @@
     left: 0;
     top: 0;
     padding-left: rem(16);
-    .searchs{
+    .searchs {
       @extend %search;
     }
   }
-    .search-remove {
-      font-size: rem(32);
-      color: #000000;
-      line-height: rem(32);
-      margin-left: rem(18);
-    }
+  .search-remove {
+    font-size: rem(32);
+    color: #000000;
+    line-height: rem(32);
+    margin-left: rem(18);
+  }
 }
-.order-nav{
+
+.order-nav {
   @include display(flex);
-  @include hairline(bottom, #d9d9d9);
+  @include hairline(bottom,
+  #d9d9d9);
   position: relative;
   background: #f8f8fa;
   height: rem(96);
   line-height: rem(96);
   margin-bottom: rem(30);
-  li{
+  li {
     @include display(flex);
     @include align-items(center);
     @include justify-content(center);
-    @include hairline(right, #d9d9d9);
+    @include hairline(right,
+    #d9d9d9);
     position: relative;
     font-size: rem(28);
     color: #585858;
     width: 33.33%;
     text-align: center;
-    &:last-child{
-      @include hairline(right, #f8f8fa);
+    &:last-child {
+      @include hairline(right,
+      #f8f8fa);
     }
-    .nav-name{
-     @extend %ellipsis-basic;
-     width: rem(140);
-     color: #000000;
+    .nav-name {
+      @extend %ellipsis-basic;
+      width: rem(140);
+      color: #000000;
     }
-    span{
+    span {
       display: block;
       background: url("../assets/butler/ys-down.png") no-repeat center center;
       width: rem(40);
       height: rem(40);
       background-size: 100% 100%;
       margin-left: rem(10);
+      &.flipy {
+        @include transform(scaleY(-1));
+        filter: FlipV;
+      }
     }
   }
-  &:after{
+  &:after {
     z-index: 1000;
   }
 }
-.order-list{
-  .order-detail{
+
+.order-list {
+  .order-detail {
     margin-bottom: rem(40);
-    .order-datetime{
+    .order-datetime {
       margin: 0 0 rem(16) rem(30);
       line-height: rem(28);
       color: #999999;
     }
-    .order-title{
+    .order-title {
       background: #F6FBFE;
       height: rem(88);
       line-height: rem(88);
       font-size: rem(30);
       color: #585858;
-      .order-line{
-        @include hairline(bottom, #d9d9d9);
+      .order-line {
+        @include hairline(bottom,
+        #d9d9d9);
         position: relative;
         margin-left: rem(30);
       }
     }
-    .order-date{
-      @include hairline(bottom, #d9d9d9);
+    .order-date {
+      @include hairline(bottom,
+      #d9d9d9);
       background: #ffffff;
       position: relative;
       padding: rem(26) 0 rem(6) rem(30);
       font-size: rem(24);
       color: #232323;
-      .order-cont{
+      .order-cont {
         @include display(flex);
-       padding-bottom: rem(20);
+        padding-bottom: rem(20);
         line-height: rem(36);
-        div{
+        div {
           width: 50%;
-          label{
+          label {
             color: #888888;
             margin-right: rem(20);
           }
-          i{
+          i {
             font-style: normal;
             font-family: arial;
             margin-right: rem(5);
           }
-          span{
+          span {
             color: #F76260;
           }
         }
@@ -187,9 +206,11 @@
     }
   }
 }
-.main-select{
+
+.main-select {
   position: relative;
 }
+
 .nav-bg {
   position: fixed;
   left: 0;
@@ -198,29 +219,26 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
-  display: none;
-  &.ordershow{
-    display: block;
-  }
 }
 
-.business{
+.fold,
+.y-datetime {
+  background: #F8F8FA;
+}
+
+.business {
   width: 100%;
   position: fixed;
   left: 0;
   right: 0;
   top: rem(272);
   z-index: 1002;
-  background: #F8F8FA;
   font-size: rem(28);
   color: #888888;
   overflow: auto;
-  display: none;
-  &.ordershow{
-    display: block;
-  }
-  .items-li{
-    @include hairline(bottom, #d9d9d9);
+  .items-li {
+    @include hairline(bottom,
+    #d9d9d9);
     @include display(flex);
     @include justify-content(space-between);
     @include align-items(center);
@@ -229,23 +247,24 @@
     line-height: rem(88);
     margin-left: rem(30);
     padding-right: rem(30);
-    b{
+    b {
       font-weight: normal;
     }
-    i{
+    i {
       display: block;
       background: url("../assets/butler/down.png") no-repeat center bottom;
       width: rem(24);
       height: rem(16);
       background-size: 100% 100%;
-      &.ico-up{
-        background: url("../assets/butler/up.png") no-repeat center top;
+      &.ico-up {
+        @include transform(scaleY(-1));
+        filter: FlipV;
       }
     }
-    .items-time{
+    .items-time {
       @include display(flex);
       @include align-items(center);
-      i{
+      i {
         display: block;
         background: url("../assets/butler/ys-right.png") no-repeat left top;
         width: rem(16);
@@ -255,23 +274,24 @@
       }
     }
   }
-  ul{
+  ul {
     background: #ffffff;
-    li{
+    li {
       @include display(flex);
-      @include hairline(bottom, #d9d9d9);
+      @include hairline(bottom,
+      #d9d9d9);
       @include align-items(center);
       position: relative;
       height: rem(88);
       line-height: rem(88);
       margin-left: rem(30);
-      i{
+      i {
         display: block;
         width: rem(40);
         margin-right: rem(20);
       }
-      &.active{
-        i{
+      &.active {
+        i {
           background: url("../assets/butler/pro-radio.png") no-repeat center bottom;
           width: rem(40);
           height: rem(40);
@@ -279,32 +299,39 @@
         }
       }
     }
-    &.order-status{
+    &.order-status {
       background: #F8F8FA;
-      li{
-        &.active{
-        color: #F76260;
+      li {
+        &.active {
+          color: #F76260;
         }
       }
     }
   }
 }
+
+
 /* 时间插件样式 */
+
 .dp-mask {
   z-index: 2222;
 }
+
 .dp-header .dp-item {
   color: #585858;
   font-size: rem(30);
 }
+
 .dp-header .dp-item.vux-datetime-clear {
   color: #232323;
   font-weight: bold;
   font-size: rem(34);
 }
+
 .dp-header .dp-item.dp-right {
   color: #000000;
 }
+
 .vux-no-group-title,
 .weui-cells {
   margin-top: 0;
@@ -312,12 +339,14 @@
   font-size: rem(28);
   margin-left: rem(30);
 }
-.weui-cell{
-  padding:0;
+
+.weui-cell {
+  padding: 0;
   height: rem(88);
   line-height: rem(88);
   padding-right: rem(30);
 }
-.weui-cells:before{
+
+.weui-cells:before {
   display: none;
 }
